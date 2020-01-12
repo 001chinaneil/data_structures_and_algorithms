@@ -19,3 +19,13 @@ function compare(num1,num2){
 let nums_sort = [3,1,100,39,76,56];
 nums_sort.sort(compare);
 console.log(nums_sort);
+
+console.log('-----用map函数给数组重新生成新数组---------------------------------------------------');
+function first(word){
+	return word[0];
+}
+let array1 = ['for','me','information'];
+let array1_new = array1.map(first);
+console.log('新数组',array1_new);
+let array1_join = array1_new.join('');
+console.log('join之后的',array1_join);
