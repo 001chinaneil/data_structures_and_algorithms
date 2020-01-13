@@ -29,3 +29,10 @@ let array1_new = array1.map(first);
 console.log('新数组',array1_new);
 let array1_join = array1_new.join('');
 console.log('join之后的',array1_join);
+
+console.log('-----i++与++i的区别----------------------------------------');
+let i = 0;
+let b = i++;
+let c = ++i;
+console.log(b,c);
+// i++：先赋(值)后加；++i：先加后赋(值)；
