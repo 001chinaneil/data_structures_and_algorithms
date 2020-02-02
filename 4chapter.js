@@ -28,7 +28,7 @@ function length(){
 let s = new Stack();
 s.push('David');
 s.push('Raymond');
-s.push('Bryan');
+s.push(':wqBryan');
 console.log('length: ' + s.length());
 console.log(s.peek());
 let popped = s.pop();
@@ -41,3 +41,21 @@ console.log('length: ' + s.length());
 console.log(s.peek());
 s.push('Clayton');
 console.log(s.peek());
+
+// 数制间的相互转换
+function mulBase(num, base){
+	let s = new Stack();
+	do {
+		s.push(num % base);
+		console.log('插入值：', num % base);
+		num = Math.floor(num /= base);
+	}while (num > 0);
+	var converted = '';
+	while(s.length() > 0){
+		converted += s.pop();
+	}
+	return converted;
+}
+let num = 10;let base = 2;
+let newNum = mulBase(10,2);
+console.log(newNum);
