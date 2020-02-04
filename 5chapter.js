@@ -34,3 +34,14 @@ function empty(){
         return false;
     }
 }
+
+console.log('-----测试 队列程序---------------------');
+let q = new Queue();
+q.enqueue('Meredith');
+q.enqueue('Cynthia');
+q.enqueue('Jennifer');
+console.log( q.toString() );
+q.dequeue();
+console.log( q.toString() );
+console.log('队首的元素：' + q.front());
+console.log('队尾的元素：' + q.back());
